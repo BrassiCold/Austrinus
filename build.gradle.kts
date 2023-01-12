@@ -29,6 +29,10 @@ dependencies {
     compileOnly(fileTree("libs"))
 }
 
+tasks.withType<Jar> {
+    destinationDir = file("E:/MCServer/AustrinusPlugins")
+}
+
 tasks.withType<JavaCompile> {
     options.encoding = "UTF-8"
 }
