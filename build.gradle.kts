@@ -13,6 +13,11 @@ taboolib {
     install("module-lang")
     install("platform-bukkit")
     install("expansion-command-helper")
+    description {
+        contributors {
+            name("BrassiCold")
+        }
+    }
     classifier = null
     version = "6.0.10-60"
 }

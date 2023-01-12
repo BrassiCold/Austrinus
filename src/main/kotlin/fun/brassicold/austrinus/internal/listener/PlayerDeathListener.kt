@@ -4,6 +4,6 @@ import org.bukkit.event.entity.PlayerDeathEvent
 
 object PlayerDeathListener {
     fun onPluginDeath(event: PlayerDeathEvent) {
-
+        event.keepInventory = true
     }
 }
