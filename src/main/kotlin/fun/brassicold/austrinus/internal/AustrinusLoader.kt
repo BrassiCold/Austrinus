@@ -2,7 +2,7 @@ package `fun`.brassicold.austrinus.internal
 
 import `fun`.brassicold.austrinus.Austrinus.PluginName
 import `fun`.brassicold.austrinus.Austrinus.setting
-import `fun`.brassicold.austrinus.util.ObtainSettingUtil
+import `fun`.brassicold.austrinus.util.ObtainSettingUtil.obtainSettingUtil
 import `fun`.brassicold.austrinus.util.PluginReloadEvent
 import taboolib.common.platform.event.SubscribeEvent
 import taboolib.common.platform.function.console
@@ -24,6 +24,6 @@ object AustrinusLoader {
     @SubscribeEvent
     fun opr(opr: PluginReloadEvent) {
         setting.reload()
-        ObtainSettingUtil()
+        obtainSettingUtil()
     }
 }
