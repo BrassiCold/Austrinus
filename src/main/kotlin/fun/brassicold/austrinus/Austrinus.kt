@@ -1,11 +1,21 @@
-package fun.brassicold.austrinus
+package `fun`.brassicold.austrinus
 
+import `fun`.brassicold.austrinus.internal.AustrinusLoader.disable
+import `fun`.brassicold.austrinus.internal.AustrinusLoader.enable
+import `fun`.brassicold.austrinus.internal.AustrinusLoader.load
 import taboolib.common.platform.Plugin
-import taboolib.common.platform.function.info
 
 object Austrinus : Plugin() {
 
+    override fun onLoad() {
+        load()
+    }
+
     override fun onEnable() {
-        info("Successfully running ExamplePlugin!")
+        enable()
+    }
+
+    override fun onDisable() {
+        disable()
     }
 }
