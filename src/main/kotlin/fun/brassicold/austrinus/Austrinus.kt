@@ -9,8 +9,6 @@ import taboolib.module.configuration.ConfigFile
 
 object Austrinus : Plugin() {
 
-    const val PluginName = "Austrinus"
-
     @Config("setting.yml", true, autoReload = true)
     lateinit var setting: ConfigFile
 

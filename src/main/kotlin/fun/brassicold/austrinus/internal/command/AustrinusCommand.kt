@@ -1,9 +1,9 @@
 package `fun`.brassicold.austrinus.internal.command
 
-import `fun`.brassicold.austrinus.Austrinus.PluginName
 import `fun`.brassicold.austrinus.util.PluginReloadEvent
 import taboolib.common.platform.ProxyCommandSender
 import taboolib.common.platform.command.*
+import taboolib.common.platform.function.pluginId
 import taboolib.module.lang.sendLang
 
 @CommandHeader(
@@ -26,7 +26,7 @@ object AustrinusCommand {
     val reload = subCommand {
         execute<ProxyCommandSender> { sender, _, _, ->
             PluginReloadEvent.call()
-            sender.sendLang("command-reload", PluginName)
+            sender.sendLang("command-reload", pluginId)
         }
     }
 }

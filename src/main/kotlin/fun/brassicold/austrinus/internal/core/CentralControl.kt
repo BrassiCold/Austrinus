@@ -6,8 +6,9 @@ import `fun`.brassicold.austrinus.util.ObtainSettingUtil.setting_DropItemOrder_m
 import `fun`.brassicold.austrinus.util.percentInto
 import taboolib.common.util.random
 
+
 object CentralControl {
-    private fun dropItemOrder(): Int? {
+    private fun dropItemOrder(): Any? {
         val dropItemOrder = setting_DropItemOrder_percentOrder?.let { percentInto(it) }
         if (dropItemOrder == null) {
             if (setting_DropItemOrder_maxOrder == setting_DropItemOrder_minOrder) {
@@ -17,20 +18,13 @@ object CentralControl {
         }
         return dropItemOrder
     }
-    fun DropOrder(InventoryOrder: Int): Int? {
-        val dropOrder = dropItemOrder()
-        if (dropOrder == 0) {
-            return 0
-        } else if (dropOrder != null) {
-            if (dropOrder < 0) {
-                return (dropOrder.let { InventoryOrder.times(it) })
-            }
-        }
-        if (dropOrder != null) {
-            if (dropOrder > InventoryOrder) {
-                return InventoryOrder
-            }
-        }
+    fun DropOrder(InventoryOrder: Int): Any? {
+        val dropOrder = dropItemOrder().toString().toDouble()
+       if (dropOrder > InventoryOrder) {
+           return InventoryOrder
+       } else if (dropOrder < 1) {
+           return (InventoryOrder * dropOrder).toInt()
+       }
         return dropOrder
     }
 }
