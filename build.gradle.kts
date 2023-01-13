@@ -11,6 +11,7 @@ taboolib {
     install("module-chat")
     install("module-configuration")
     install("module-lang")
+    install("module-metrics")
     install("platform-bukkit")
     install("expansion-command-helper")
     description {
