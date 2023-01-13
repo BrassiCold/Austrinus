@@ -1,6 +1,7 @@
 package `fun`.brassicold.austrinus.internal.core
 
 import `fun`.brassicold.austrinus.internal.core.CentralControl.DropOrder
+import `fun`.brassicold.austrinus.util.itemInventoryNumber
 import `fun`.brassicold.austrinus.util.obtainPlayerInventoryLocation
 import org.bukkit.entity.Player
 import taboolib.common.platform.function.console
@@ -13,7 +14,7 @@ object PlayerDeathRandomDrop {
         console().sendMessage("§7|-传入的DeathPlayer值为$deathPlayer | 类型为${deathPlayer::class.simpleName}")
         val deathPlayerInventory = deathPlayer.inventory //获取死亡玩家背包
         console().sendMessage("§7|-定义的变量deathPlayerInventory的值为$deathPlayerInventory | 类型为${deathPlayerInventory::class.simpleName}")
-        val deathPlayerInventoryOrder = deathPlayerInventory.filterNotNull().size  //获取玩家非空格子的数量
+        val deathPlayerInventoryOrder = itemInventoryNumber(deathPlayerInventory)  //获取玩家非空格子的数量
         console().sendMessage("§7|-定义的变量deathPlayerInventoryOrder的值为$deathPlayerInventoryOrder | 类型为${deathPlayerInventoryOrder::class.simpleName}")
         val deathPlayerDropItemOrder = DropOrder(deathPlayerInventoryOrder) //获取定义的掉落数量
         console().sendMessage("§7|-定义的变量deathPlayerDropItemOrder的值为$deathPlayerDropItemOrder | 类型为${deathPlayerDropItemOrder::class.simpleName}")
