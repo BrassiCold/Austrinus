@@ -1,12 +1,17 @@
 package `fun`.brassicold.austrinus.internal.listener
 
-import `fun`.brassicold.austrinus.internal.core.PlayerDeathRandomDrop
 import org.bukkit.event.entity.PlayerDeathEvent
 import taboolib.common.platform.event.SubscribeEvent
+import `fun`.brassicold.austrinus.internal.core.PlayerDeathRandomDrop.playerDeathRandomDrop
 
-@SubscribeEvent
-fun onPluginDeath(event: PlayerDeathEvent) {
-        event.keepInventory = true
-        event.drops.clear()
-        PlayerDeathRandomDrop()
+
+object PlayerDeathListener {
+    private lateinit var DeathEvent: PlayerDeathEvent
+    @SubscribeEvent
+    fun onPluginDeath(event: PlayerDeathEvent) {
+        DeathEvent = event
+        DeathEvent.keepInventory = true
+        playerDeathRandomDrop(DeathEvent.entity)
+    }
 }
+

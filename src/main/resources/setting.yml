@@ -1,7 +1,9 @@
-
+#Austrinus Setting
 ItemDropOrder:
   maxOrder: 10
   minOrder: 5
   percentOrder: 0%
+
 InventoryItemDrop: false
 
+Death-action: |-

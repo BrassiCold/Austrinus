@@ -18,13 +18,13 @@ object CentralControl {
         }
         return dropItemOrder
     }
-    fun DropOrder(inventoryOrder: Int): Any {
+    fun DropOrder(inventoryOrder: Int): Int {
         val dropOrder = dropItemOrder().toString().toDouble()
        if (dropOrder > inventoryOrder) {
            return inventoryOrder
        } else if (dropOrder < 1) {
            return (inventoryOrder * dropOrder).toInt()
        }
-        return dropOrder
+        return dropOrder.toInt()
     }
 }
