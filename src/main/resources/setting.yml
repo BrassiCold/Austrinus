@@ -2,7 +2,7 @@
 ItemDropOrder:
   maxOrder: 10
   minOrder: 5
-  percentOrder: 0%
+  percentOrder: null
 
 InventoryItemDrop: false
 

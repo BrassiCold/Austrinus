@@ -16,7 +16,6 @@ object Austrinus : Plugin() {
     lateinit var setting: ConfigFile
 
     override fun onLoad() {
-
         load()
     }
 
