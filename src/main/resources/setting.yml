@@ -1,9 +1,42 @@
 #Austrinus Setting
+World-open:
+  - world
+  - world_nether
+  - world_the_end
+
+InventoryItemDrop: false
+
 ItemDropOrder:
+  enabled: true
   maxOrder: 10
   minOrder: 5
   percentOrder: null
 
-InventoryItemDrop: false
+Permission-Drop:
+    -
+      permission: austrinus.drop.default
+      itemDropOrder:
+        maxOrder: 5
+        minOrder: 10
+        percentOrder: null
+    -
+      permission: austrinus.drop.ordinary
+      itemDropOrder:
+        maxOrder: 0
+        minOrder: 0
+        percentOrder: 30%
+    -
+      permission: austrinus.drop.special
+      itemDropOrder:
+        maxOrder: 1
+        minOrder: 5
+        percentOrder: null
+    -
+      permission: austrinus.drop.diy
+      itemDropOrder:
+        maxOrder: 1
+        minOrder: 1
+        percentOrder: null
 
 Death-action: |-
+  
