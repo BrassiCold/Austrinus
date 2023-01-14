@@ -15,7 +15,6 @@ object PlayerDeathRandomDrop {
         val dropList = ArrayList<Int>()
         if (deathPlayerDropItemOrder <= itemLocations.size) { for (i in 0 until deathPlayerDropItemOrder) { dropList.add(itemLocations[i]) } }
         dropList.sort()
-        val obtainItemNumber = obtainNumber(dropList, deathPlayerInventory)
         dropItem(dropList, deathPlayerInventory)
         dropItemAtDeath(dropList, deathPlayerInventory, deathPlayer)
     }

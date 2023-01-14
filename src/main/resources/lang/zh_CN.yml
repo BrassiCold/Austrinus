@@ -15,3 +15,6 @@ plugin-mode-percent: '&7[ &b{0} &7] &b{0} &6当前掉落模式为百分比掉落
 plugin-mode-number: '&7[ &b{0} &7] &b{0} &6当前掉落模式为随机掉落| 随机掉落数量为&7【&3{1}&7】'
 plugin-mode-inventory-true: '&7[ &b{0} &7] &b{0} &6当前物品栏掉落已开启'
 plugin-mode-inventory-false: '&7[ &b{0} &7] &b{0} &6当前物品栏掉落已关闭'
+
+plugin-playerInWorld-true: '&7[ &b{0} &7] &b{0} &6玩家不在指定世界中'
+plugin-playerInWorld-false: '&7[ &b{0} &7] &b{0} &6玩家在指定世界中'
