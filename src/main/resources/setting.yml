@@ -3,6 +3,7 @@ World-open:
   - world
   - world_nether
   - world_the_end
+  - diy
 
 InventoryItemDrop: false
 
